@@ -1,0 +1,2 @@
+# Coding Challenge 20
+In this challenge, I built a React Tour Explorer app that allows users to fetch and display a list of tour destinations from a remote API, select a destination from a dropdown list, and view only the selected tour or all tours.
