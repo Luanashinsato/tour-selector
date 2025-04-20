@@ -21,14 +21,6 @@ const DestinationSelector = ({ tours }) => {
                     ))}
                 </select>
             </div>
-
-            {filteredTours.map((tour) => ( // Map through the filtered tours
-                <TourCard
-                    key={tour.id} // Unique key for each tour
-                    {...tour} // Spread operator to pass tour properties as props
-                    onRemove={onRemove} // Pass the remove function to TourCard
-                />
-            ))} 
         </section>
       );
 };

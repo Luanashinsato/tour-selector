@@ -13,7 +13,9 @@ const App = () => {
 
   // Function to remove a tour from the list
   const removeTour = (id) => {
-    setTours((prevTours) => prevTours.filter((tour) => tour.id !== id)); // Filtering out the tour with the given id
+    setTours((prevTours) => {
+      const updatedTours = prevTours.filter((tour) => tour.id !== id); // Filtering out the tour with the given id
+    });
   };
 
   return (

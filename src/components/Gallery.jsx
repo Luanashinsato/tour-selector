@@ -32,6 +32,27 @@ const Gallery = ({ tours, setTours, onRemove }) => {
     if (error) {
         return <h2>Something went wrong. Please try again later.</h2>;
     }
+
+    // Task 3: Rendering Tour Cards
+    // Rendering tours or no tours left
+    if (tours.length === 0)
+        return (
+          <div>
+            <h2>No Tours Left</h2>
+            <button onClick={fetchTours}>Refresh</button>
+          </div>
+    );
+
+    // Rendering the gallery of tours
+    return (
+        <section className="gallery">
+            <div className="gallery-container">
+                {tours.map((tour) => ( // Mapping through tours to create TourCard components
+                    <TourCard key={tour.id} {...tour} onRemove={onRemove} /> // Passing tour data as props to TourCard
+                ))}
+            </div>
+        </section>
+    )
 };
 
 export default Gallery; // Exporting the Gallery component
