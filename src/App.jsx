@@ -15,6 +15,12 @@ const App = () => {
   const removeTour = (id) => {
     setTours((prevTours) => {
       const updatedTours = prevTours.filter((tour) => tour.id !== id); // Filtering out the tour with the given id
+      if (
+        selectedTour !== 'all' && // Checking if the selected tour is not 'all'
+        updatedTours.filter((tour) => tour.name === selectedTour).length === 0) {
+        setSelectedTour('all'); // Resetting the selected tour to 'all' if no tours are left
+      }
+      return updatedTours; // Returning the updated list of tours
     });
   };
 

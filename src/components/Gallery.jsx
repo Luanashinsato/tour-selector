@@ -33,7 +33,7 @@ const Gallery = ({ tours, setTours, onRemove }) => {
         return <h2>Something went wrong. Please try again later.</h2>;
     }
 
-    // Task 3: Rendering Tour Cards
+    // Task 4: Resetting view if all cards are removed
     // Rendering tours or no tours left
     if (tours.length === 0)
         return (
@@ -43,6 +43,7 @@ const Gallery = ({ tours, setTours, onRemove }) => {
           </div>
     );
 
+    // Task 3: Rendering Tour Cards
     // Rendering the gallery of tours
     return (
         <section className="gallery">
