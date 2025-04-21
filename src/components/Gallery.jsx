@@ -8,7 +8,7 @@ const Gallery = ({ tours, setTours, onRemove }) => {
 
     const fetchTours = async () => { // Writing a function to fetch tours
         try {
-            const res = await fetch('https://course-api.com/react-tours-project'); // Fetching data from API
+            const res = await fetch('https://www.course-api.com/react-tours-project'); // Fetching data from API
             const data = await res.json(); // Parsing response data
             setTours(data);
             setLoading(false);

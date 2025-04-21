@@ -1,7 +1,7 @@
 // Task 2: Creating a dropdown menu populated with unique tour names
 import React, { useState } from 'react'; // Importing React and useState
 
-const DestinationSelector = ({ tours }) => {
+const DestinationSelector = ({ tours, selectedTour, setSelectedTour }) => {
     return (
         <section className="destination-selector">
             {/* Dropdown menu for selecting a destination */}
